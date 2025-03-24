@@ -1,0 +1,180 @@
+.house{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    background-color: var(--color-bg);
+
+
+
+    &__content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 1440px;
+        width: 100%;
+        gap: 70px;
+
+        & > h1 {
+            width: 100%;
+            color: var(--color-text);
+            font-size: 80px;
+            font-weight: 700;
+            line-height: 125%;
+            letter-spacing: 1%;
+            text-align: center;
+            text-transform: uppercase;
+        }
+    }
+    &__dashbort{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+    &__list__btn{
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        border: 1px solid var(--color-border);
+        border-radius: 100px;
+        margin-bottom: 25px;
+        
+        & > button{
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            background-color: initial;
+            align-items: center;
+            justify-content: space-around;
+            border: none;
+            border-radius: 100px;
+            padding: 20px;
+            color: var(--color-bg-btn);
+            transition: background-color .1s ease-in-out , color .1s ease-in-out;
+            
+
+            &:hover{
+                background-color: var(--color-bg-btn);
+                color: #000;
+            }
+
+            & > img{
+                width: 35px;
+            }
+        }
+    }
+    &__ul{
+        display: flex;
+        flex-direction: row;
+        margin: 0 auto;
+        flex-wrap:wrap;
+        width: 100%;
+        gap: 20px;
+    }
+    &__li{
+        position: relative;
+        display: flex;
+        width: 100%;
+        max-width: calc((100% /4) - 20px);
+        height: 452px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: silver;
+        gap: 10px;
+        border-radius: 20px;
+
+        &__start{
+            position: absolute;
+            width: 100%;
+            max-width: calc(100% - 40px);
+            padding: 10px;
+            bottom: 10px;
+            left: 10px;
+
+            & > h2{
+                width: 100%;
+                font-size: 26px;
+                font-weight: 500;
+                line-height: 140%;
+                letter-spacing: 0%;
+                text-align: left;
+                color: var(--color-card-h);
+            }
+            & > p {
+                width: 100%;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 140%;
+                letter-spacing: 0%;
+                text-align: left;
+                color: var(--color-text);
+            }
+            & > button {
+                display: flex;
+                flex-direction: row;
+                gap: 10px;
+                width: 100%;
+                border: none;
+                background-color: initial;
+                text-align: left;
+                cursor: pointer;
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 140%;
+                letter-spacing: 0%;
+                color: var(--color-card-h);
+
+                & > img {
+                    width: 175px;
+                    height: 21px;
+                }
+            }
+        }
+        &__end{
+            display: none;
+            position: absolute;
+            flex-direction: column;
+            height: 0;
+            opacity: 0;
+            gap: 2px;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 10px;
+            border-radius: 20px;
+            border: 1px solid var(--color-card-h);
+            background-color: var(--color-bg) ;
+            transition: height 0.3 ease-in-out;
+            
+            & > p {
+                color: var(--color-card-h);
+                font-size: 14px;
+                font-weight: 300;
+                line-height: 140%;
+                letter-spacing: 0%;
+                text-align: left;
+            }
+            &__span{
+                color: var(--color-text);
+                font-size: 14px;
+                font-weight: 300;
+                line-height: 140%;
+                letter-spacing: 0%;
+            }
+
+            &.activy{
+                display: flex;
+                height: 100%;
+                opacity: 1;
+
+            }
+
+        }
+        
+    }
+}
