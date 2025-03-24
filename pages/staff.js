@@ -8,7 +8,7 @@ async function staffs() {
 
     const resultJSON = await result.json()
     
-     
+    
 
     if(resultJSON){
         createCrad(resultJSON)
@@ -36,8 +36,8 @@ async function staffs() {
             let hair = key.hairColour;
             let wand = key.wand;
             let patronus = key.patronus;
-            let hogwartsStudent = key.hogwartsStudent;
-            let hogwartsStaff = key.hogwartsStaff;
+            let hogwartsstudent = key.hogwartsStudent;
+            let hogwartsstaff = key.hogwartsStaff;
             let actor = key.actor;
             let alive = key.alive
 
@@ -65,8 +65,8 @@ async function staffs() {
                                     <p>Hair colour: <span class="staff__li__end__span">${hair}</span></p>
                                     <p>Wand:<span class="sstaff__li__end__span">${wand.core}</span></p>
                                     <p>Patronus: <span class="staff__li__end__span">${patronus}</span></p>
+                                    <p>Hogwarts student: <span class="staff__li__end__span">${hogwartsstudent}</span></p>
                                     <p>Hogwarts staff: <span class="staff__li__end__span">${hogwartsstaff}</span></p>
-                                    <p>Hogwarts staff: <span class="staff__li__end__span">${hogwartsStaff}</span></p>
                                     <p>Actor: <span class="staff__li__end__span">${actor}</span></p>
                                     <p>Alive: <span class="staff__li__end__span">${alive}</span></p>
                                 </div>
